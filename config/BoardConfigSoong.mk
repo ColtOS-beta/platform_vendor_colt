@@ -54,7 +54,8 @@ SOONG_CONFIG_coltGlobalVars += \
     uses_egl_display_array \
     uses_nothing_camera \
     uses_oplus_camera \
-    uses_oppo_camera
+    uses_oppo_camera \
+    needs_camera_boottime 
 
 SOONG_CONFIG_NAMESPACES += coltNvidiaVars
 SOONG_CONFIG_coltNvidiaVars += \
@@ -84,6 +85,7 @@ SOONG_CONFIG_coltGlobalVars_uses_egl_display_array := $(TARGET_USES_EGL_DISPLAY_
 SOONG_CONFIG_coltGlobalVars_uses_nothing_camera := $(TARGET_USES_NOTHING_CAMERA)
 SOONG_CONFIG_coltGlobalVars_uses_oplus_camera := $(TARGET_USES_OPLUS_CAMERA)
 SOONG_CONFIG_coltGlobalVars_uses_oppo_camera := $(TARGET_USES_OPPO_CAMERA)
+SOONG_CONFIG_havocGlobalVars_needs_camera_boottime := $(TARGET_CAMERA_BOOTTIME_TIMESTAMP)
 SOONG_CONFIG_coltNvidiaVars_uses_nvidia_enhancements := $(NV_ANDROID_FRAMEWORK_ENHANCEMENTS)
 SOONG_CONFIG_coltQcomVars_qti_vibrator_use_effect_stream := $(TARGET_QTI_VIBRATOR_USE_EFFECT_STREAM)
 SOONG_CONFIG_coltQcomVars_supports_extended_compress_format := $(AUDIO_FEATURE_ENABLED_EXTENDED_COMPRESS_FORMAT)
