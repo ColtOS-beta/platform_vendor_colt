@@ -105,8 +105,10 @@ PRODUCT_COPY_FILES += \
     vendor/colt/prebuilt/common/etc/init/init.lineage-updater.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/init.lineage-updater.rc
 
 # Charger
+ifeq ($(USE_PIXEL_CHARGER),true)
 PRODUCT_PACKAGES += \
     product_charger_res_images
+endif
 
 # Config
 PRODUCT_PACKAGES += \
