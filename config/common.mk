@@ -114,9 +114,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     build-manifest
 
-PRODUCT_COPY_FILES += \
-    vendor/colt/prebuilt/common/etc/init/init.lineage-updater.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/init.lineage-updater.rc
-    
 # BtHelper
 PRODUCT_PACKAGES += \
     BtHelper
