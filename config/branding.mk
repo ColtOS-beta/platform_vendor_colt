@@ -16,14 +16,10 @@
 
 # ColtOS Versioning System
 COLT_MAJOR_VERSION = v14
-COLT_RELEASE_VERSION = ---
+COLT_RELEASE_VERSION = 0
 COLT_BUILD_TYPE ?= Unofficial
 COLT_BUILD_MAINTAINER ?= Unknown
 COLT_BUILD_ZIP_TYPE := VANILLA
-
-ifeq ($(WITH_GMS), true)
-COLT_BUILD_ZIP_TYPE := GAPPS
-endif
 
 # Colt Release
 ifeq ($(COLT_BUILD_TYPE), Official)
