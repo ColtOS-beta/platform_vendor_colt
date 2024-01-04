@@ -41,11 +41,16 @@ PRODUCT_PACKAGES += \
 
 endif
 
-ifdef COLT_GAPPS
-    $(call inherit-product, vendor/gms/products/gms.mk)
-    COLT_BUILD_ZIP_TYPE := GAPPS
+# Inherit from GMS product config
+ifeq ($(WITH_GAPPS_MINI),true)
+$(call inherit-product, vendor/gms/gms_mini.mk)
+COLT_BUILD_ZIP_TYPE := CORE
+else ifeq ($(WITH_GAPPS),true)
+$(call inherit-product, vendor/gms/gms_full.mk)
+COLT_BUILD_ZIP_TYPE := GAPPS
+else
+COLT_BUILD_ZIP_TYPE := VANILLA
 endif
-
 
 # System version
 TARGET_PRODUCT_SHORT := $(subst colt_,,$(COLT_BUILD_TYPE))
